@@ -22,7 +22,7 @@ https://en.wikipedia.org/wiki/Scalable_Vector_Graphics
 
 ## Tools
 
-* http://mondrian.io - broser based SVG creator
+* http://mondrian.io - browser based SVG creator
 
 
 ## Usage
@@ -39,6 +39,7 @@ https://css-tricks.com/using-svg/
 ## Responsive
 
 http://demosthenes.info/blog/744/Make-SVG-Responsive
+
 http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/
 
 * `img`: `<img src="monkey.svg" alt="Monkey face" style="width: 100%; height: auto;">`
@@ -64,7 +65,7 @@ The resposnive version:
 </svg>
 ```
 
-Older browsers like IE needs hacks presented above.
+Older browsers like IE needs hacks presented in the above articles.
 
 
 
