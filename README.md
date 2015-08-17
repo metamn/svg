@@ -4,9 +4,8 @@ Playing with SVG
 
 ## Usage
 
-* https://css-tricks.com/using-svg/
+- https://css-tricks.com/using-svg/
 
----
 
 * `img` &mdash; cannot control via CSS
 * `svg` (inline) &mdash; full CSS control; it's hard to cache
@@ -16,7 +15,7 @@ Playing with SVG
 
 ## Structure
 
-* http://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/
+- http://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/
 
 
 ### Group (<g>)
