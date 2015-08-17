@@ -6,6 +6,7 @@ Playing with SVG
 
 * https://css-tricks.com/using-svg/
 
+---
 
 * `img` &mdash; cannot control via CSS
 * `svg` (inline) &mdash; full CSS control; it's hard to cache
