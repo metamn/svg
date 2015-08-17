@@ -74,6 +74,9 @@ Older browsers like IE needs hacks presented in the above articles.
 
 https://css-tricks.com/guide-svg-animations-smil/
 
+https://css-tricks.com/weighing-svg-animation-techniques-benchmarks/
+
+
 * There are 3 ways to animate SVG:
   * Standard CSS animations and transitions
   * Javascript animations
@@ -87,42 +90,22 @@ https://css-tricks.com/guide-svg-animations-smil/
 
 #### Javascript
 
-* with tools like http://snapsvg.io/
+* with tools like http://snapsvg.io/, https://github.com/julianshapiro/velocity, https://github.com/greensock/GreenSock-JS/
 * they don't work with `img` and `background-image`
 
 #### SMIL
 
 * SMIL seems to be a complete, very powerful animation framework like the best others out there (GreenSock)
-* you can animate one attribute at a time through `attributeName`.
-* if there are more animations a new `<animate>` has to be created for each of them
-* animations are chainable via the `begin` parameter
+* It seems to have the best performance
 
-```
-<circle id="orange-circle" r="30" cx="50" cy="50" fill="orange" />
+More details in SMIL.md
 
-<rect id="blue-rectangle" width="50" height="50" x="25" y="200" fill="#0099cc"></rect>
+#### Which one to use and when
 
-  <animate
-    xlink:href="#orange-circle"
-    attributeName="cx"
-    from="50"
-    to="450"
-    dur="5s"
-    begin="click"
-    fill="freeze"
-    d="circ-anim" />
-
-  <animate
-    xlink:href="#blue-rectangle"
-    attributeName="x"
-    from="50"
-    to="425"
-    dur="5s"
-    begin="circ-anim.begin + 1s"
-    fill="freeze"
-    id="rect-anim" />
-```
-
+* CSS - for small small transitions or simple animations
+* SMIL - for morhping elements, physics and more. Ie when CSS is not adequate. Ie the main method to do animations
+* Velocity.js - hmm
+* GSAP - for very complex animations
 
 
 
