@@ -56,9 +56,17 @@ http://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/
 <svg class="icon" viewBox="0 0 100 125">
     <use class="ic-2" xlink:href="#ic" x="0" y="0" />
 </svg>
+
+use.ic-1 {
+    // CSS here;
+}
+
+use.ic-2 {
+    // CSS here;
+}
 ```
 
-* even if the first `<svg>` is just a declaration (belongs to Shadow DOM) the browser will render an empty 300x150px area.
+Even if the first `<svg>` is just a declaration (belongs to Shadow DOM) the browser will render an empty 300x150px area.
 Hence all declarations must have set `display: none`
 
 
@@ -167,3 +175,7 @@ This will make all SVG attributes which are controllable via CSS to be overwritt
   --tertiary-color: #333;
 }
 ```
+
+`var(--primary-color, #1E8F90)` is a custom CSS variable with a fallback color (`#1E8F90`).
+
+Currently only Firefox supports CSS variables. http://caniuse.com/#feat=css-variables
