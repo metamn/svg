@@ -1,0 +1,9 @@
+.coloured .ellipse {
+  fill: red;
+  stroke: red;
+}
+
+.coloured .stroke {
+  fill: blue;
+  stroke: blue;
+}

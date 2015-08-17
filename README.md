@@ -30,7 +30,7 @@ https://en.wikipedia.org/wiki/Scalable_Vector_Graphics
 https://css-tricks.com/using-svg/
 
 
-* `img` &mdash; no CSS control
+* `img` &mdash; no CSS control; no JS animations
 * `svg` (inline) &mdash; full CSS control; it's hard to cache
 * `object` &mdash; cannot be styled with external CSS, only internally inside the svg file
 * data-uri &mdash;
@@ -67,6 +67,61 @@ The resposnive version:
 
 Older browsers like IE needs hacks presented in the above articles.
 
+
+
+
+### Animation
+
+https://css-tricks.com/guide-svg-animations-smil/
+
+* There are 3 ways to animate SVG:
+  * Standard CSS animations and transitions
+  * Javascript animations
+  * Native (SMIL) animations
+
+#### CSS
+
+* SVG animations can be similar to CSS animations and transitions via by their nature. Keyframes are created, things move, colors change, etc.
+* Any transformation or transition animation that can be applied to an HTML element can also be applied to an SVG element
+* Since not all SVG (presentation) attributes are accessible by CSS, standard animations are available only for a subset of the SVG properties.
+
+#### Javascript
+
+* with tools like http://snapsvg.io/
+* they don't work with `img` and `background-image`
+
+#### SMIL
+
+* SMIL seems to be a complete, very powerful animation framework like the best others out there (GreenSock)
+* you can animate one attribute at a time through `attributeName`.
+* if there are more animations a new `<animate>` has to be created for each of them
+* animations are chainable via the `begin` parameter
+
+```
+<circle id="orange-circle" r="30" cx="50" cy="50" fill="orange" />
+
+<rect id="blue-rectangle" width="50" height="50" x="25" y="200" fill="#0099cc"></rect>
+
+  <animate
+    xlink:href="#orange-circle"
+    attributeName="cx"
+    from="50"
+    to="450"
+    dur="5s"
+    begin="click"
+    fill="freeze"
+    d="circ-anim" />
+
+  <animate
+    xlink:href="#blue-rectangle"
+    attributeName="x"
+    from="50"
+    to="425"
+    dur="5s"
+    begin="circ-anim.begin + 1s"
+    fill="freeze"
+    id="rect-anim" />
+```
 
 
 
