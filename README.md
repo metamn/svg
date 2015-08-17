@@ -20,6 +20,11 @@ https://en.wikipedia.org/wiki/Scalable_Vector_Graphics
 * metadata
 
 
+## Tools
+
+* http://mondrian.io - broser based SVG creator
+
+
 ## Usage
 
 https://css-tricks.com/using-svg/
@@ -29,6 +34,40 @@ https://css-tricks.com/using-svg/
 * `svg` (inline) &mdash; full CSS control; it's hard to cache
 * `object` &mdash; cannot be styled with external CSS, only internally inside the svg file
 * data-uri &mdash;
+
+
+## Responsive
+
+http://demosthenes.info/blog/744/Make-SVG-Responsive
+http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/
+
+* `img`: `<img src="monkey.svg" alt="Monkey face" style="width: 100%; height: auto;">`
+* `svg`: is responsive by default
+* `object`: complicated
+
+New browser make `svg` and `img` responsive by default. The condition is to have SVG attributes all stripped down to basics.
+
+The Mondrian generated SVG file:
+```
+<!-- Made in Mondrian.io -->
+<svg xmlns:mondrian="http://mondrian.io/xml" xmlns="http://www.w3.org/2000/svg" version="1.1" height="800" width="1000" id="main" style="width: 1000px; height: 800px; transform: scale(1);" viewbox="0 0 1000 800" enable-background="new 0 0 1000 800">
+<ellipse cx="273" cy="261.5" rx="94" ry="92.5"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+<path stroke="rgba(0, 0, 0, 1)" fill="rgba(95, 205, 167, 1)" stroke-width="1" d="M106,111 L628,495" />
+</svg>
+```
+
+The resposnive version:
+```
+<svg version="1.1" viewbox="0 0 1000 800">
+  <ellipse cx="273" cy="261.5" rx="94" ry="92.5"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+  <path stroke="rgba(0, 0, 0, 1)" fill="rgba(95, 205, 167, 1)" stroke-width="1" d="M106,111 L628,495" />
+</svg>
+```
+
+Older browsers like IE needs hacks presented above.
+
+
+
 
 
 ## Structure

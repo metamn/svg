@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>SVG</title>
+
+    <link href="usage.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <h1>1. IMG</h1>
+    <img src="untitled.svg">
+
+    <h1>2. SVG</h1>
+    <!-- Made in Mondrian.io -->
+    <svg version="1.1" viewbox="0 0 1000 800">
+      <ellipse cx="273" cy="261.5" rx="94" ry="92.5"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+      <path stroke="rgba(0, 0, 0, 1)" fill="rgba(95, 205, 167, 1)" stroke-width="1" d="M106,111 L628,495" />
+    </svg>
+
+    <h1>2.a SVG responsive</h1>
+    <div class="svg-container">
+      <svg version="1.1" viewbox="0 0 1000 800" preserveAspectRatio="xMinYMin meet">
+        <ellipse cx="273" cy="261.5" rx="94" ry="92.5"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+        <path stroke="rgba(0, 0, 0, 1)" fill="rgba(95, 205, 167, 1)" stroke-width="1" d="M106,111 L628,495" />
+      </svg>
+    </div>
+
+    <h1>3. Object</h1>
+    <object type="image/svg+xml" data="untitled.svg">
+      <!-- fallback image in CSS -->
+    </object>
+
+    <h1>3.a Object responsive</h1>
+    <div class="svg-container">
+      <object type="image/svg+xml" data="untitled.svg">
+        <!-- fallback image in CSS -->
+      </object>
+    </div>
+
+  </body>
+</html>
