@@ -7,9 +7,9 @@ Playing with SVG
 https://css-tricks.com/using-svg/
 
 
-* `img` &mdash; cannot control via CSS
+* `img` &mdash; no CSS control
 * `svg` (inline) &mdash; full CSS control; it's hard to cache
-* 'object' &mdash; cannot style with external CSS, only internally inside the svg file
+* `object` &mdash; cannot be styled with external CSS, only internally inside the svg file
 * data-uri &mdash;
 
 
@@ -18,25 +18,25 @@ https://css-tricks.com/using-svg/
 http://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/
 
 
-### Group (<g>)
+### Group (`<g>`)
 
 * group together objects (like a layer in PSD)
 * elements inside the group are styled uniformly
 * during animation elements inside a group preserve their positioning
 
-### Definitions (<defs>)
+### Definitions (`<defs>`)
 
 * to store reusable elements
 * `defs` are not rendered until they are instantiated via a call
 * they are useful to define patterns like gradients
 
-### Symbols (<symbol>)
+### Symbols (`<symbol>`)
 
 * combine `<g>` and `<defs>` together
 * they don't define patterns but ore complex objects
 * it's responsive via `viewBox`
 
-### Use (<use>)
+### Use (`<use>`)
 
 * renders a previously defined `<g>`, `<defs>` or `<symbol>`
 * `<g>`, `<defs>` and `<symbol>` are stored in the __Shadow DOM__. `<use>` creates and instance of them in the DOM.
