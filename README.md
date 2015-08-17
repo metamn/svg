@@ -1,6 +1,24 @@
-# svg
+# SVG
 
-Playing with SVG
+Learning & playing with SVG.
+
+## Features
+
+https://en.wikipedia.org/wiki/Scalable_Vector_Graphics
+
+* styleable
+* responsive
+* animatable
+* compressible
+* printable
+* interactive
+  * focus
+  * click
+  * scroll
+  * zoom
+* scriptable
+* metadata
+
 
 ## Usage
 
