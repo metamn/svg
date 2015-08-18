@@ -42,7 +42,7 @@ It seems the best usage is the inline `svg` method.
 
 ## Responsive
 
-http://demosthenes.info/blog/744/Make-SVG-Responsive and
+http://demosthenes.info/blog/744/Make-SVG-Responsive  
 http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/
 
 * `img`: `<img src="monkey.svg" alt="Monkey face" style="width: 100%; height: auto;">`
