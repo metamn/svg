@@ -6,23 +6,24 @@ Learning & playing with SVG.
 
 https://en.wikipedia.org/wiki/Scalable_Vector_Graphics
 
-* styleable
-* responsive
-* animatable
-* compressible
-* printable
-* interactive
-  * focus
-  * click
-  * scroll
-  * zoom
-* scriptable
-* metadata
+* [Responsive](#responsive)
+* [Structure](#structure)
+* [Styling](#styling)
+* [Animation](#animation)
+* Interactive
+  * Focus
+  * Click
+  * Scroll
+  * Zoom
+* Compression
+* Printable
+* Scripting
+* Metadata
 
 
 ## Tools
 
-* http://mondrian.io - browser based SVG creator
+* http://mondrian.io - Browser based SVG creator
 
 
 ## Usage
@@ -30,23 +31,26 @@ https://en.wikipedia.org/wiki/Scalable_Vector_Graphics
 https://css-tricks.com/using-svg/
 
 
-* `img` &mdash; no CSS control; no JS animations
-* `svg` (inline) &mdash; full CSS control; it's hard to cache
-* `object` &mdash; cannot be styled with external CSS, only internally inside the svg file
-* data-uri &mdash;
+* `img` &mdash; No CSS control; no JS animations
+* `svg` (inline) &mdash; Full CSS control; it's hard to cache
+* `object` &mdash; Cannot be styled with external CSS, only internally inside the SVG file
+* `data-uri` &mdash;
+
+It seems the best usage is the inline `svg` method.
+
 
 
 ## Responsive
 
-http://demosthenes.info/blog/744/Make-SVG-Responsive
-
-http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/
+- http://demosthenes.info/blog/744/Make-SVG-Responsive
+- http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/
 
 * `img`: `<img src="monkey.svg" alt="Monkey face" style="width: 100%; height: auto;">`
 * `svg`: is responsive by default
 * `object`: complicated
 
-New browser make `svg` and `img` responsive by default. The condition is to have SVG attributes all stripped down to basics.
+New browsers make `svg` and `img` responsive by default. The condition is to have SVG attributes all stripped down to basics.
+Older browsers like IE needs hacks presented in the above articles.
 
 The Mondrian generated SVG file:
 ```
@@ -57,7 +61,7 @@ The Mondrian generated SVG file:
 </svg>
 ```
 
-The resposnive version:
+The responsive, stripped down version:
 ```
 <svg version="1.1" viewbox="0 0 1000 800">
   <ellipse cx="273" cy="261.5" rx="94" ry="92.5"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
@@ -65,14 +69,11 @@ The resposnive version:
 </svg>
 ```
 
-Older browsers like IE needs hacks presented in the above articles.
-
 
 
 
 ### Animation
 
-https://css-tricks.com/guide-svg-animations-smil/
 
 https://css-tricks.com/weighing-svg-animation-techniques-benchmarks/
 
@@ -90,22 +91,24 @@ https://css-tricks.com/weighing-svg-animation-techniques-benchmarks/
 
 #### Javascript
 
-* with tools like http://snapsvg.io/, https://github.com/julianshapiro/velocity, https://github.com/greensock/GreenSock-JS/
-* they don't work with `img` and `background-image`
+* With tools like http://snapsvg.io/, https://github.com/julianshapiro/velocity, https://github.com/greensock/GreenSock-JS/
+* They don't work with `img` and `background-image`
 
 #### SMIL
 
 * SMIL seems to be a complete, very powerful animation framework like the best others out there (GreenSock)
-* It seems to have the best performance
+* It seems to have the best performance among all
 
-More details in SMIL.md
+More details in [SMIL.md](SMIL.md)
 
 #### Which one to use and when
 
-* CSS - for small small transitions or simple animations
-* SMIL - for morhping elements, physics and more. Ie when CSS is not adequate. Ie the main method to do animations
-* Velocity.js - hmm
-* GSAP - for very complex animations
+* CSS &mdash; For small small transitions or simple animations like hover etc.
+* SMIL &mdash; For morphing elements, physics and more.
+* Velocity.js &mdash; hmm
+* GSAP &mdash; For very complex animations
+
+
 
 
 
@@ -116,27 +119,27 @@ http://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/
 
 ### Group (`<g>`)
 
-* group together objects (like a layer in PSD)
-* elements inside the group are styled uniformly
-* during animation elements inside a group preserve their positioning
+* Group together objects (like a layer in PSD)
+* Elements inside the group are styled uniformly
+* During animation elements inside a group preserve their positioning
 
 ### Definitions (`<defs>`)
 
-* to store reusable elements
+* To store reusable elements
 * `defs` are not rendered until they are instantiated via a call
-* they are useful to define patterns like gradients
+* They are useful to define patterns like gradients
 
 ### Symbols (`<symbol>`)
 
-* combine `<g>` and `<defs>` together
-* they don't define patterns but ore complex objects
-* it's responsive via `viewBox`
+* Combine `<g>` and `<defs>` together
+* They don't define patterns but ore complex objects
+* It's responsive via `viewBox`
 
 ### Use (`<use>`)
 
-* renders a previously defined `<g>`, `<defs>` or `<symbol>`
+* Renders a previously defined `<g>`, `<defs>` or `<symbol>`
 * `<g>`, `<defs>` and `<symbol>` are stored in the __Shadow DOM__. `<use>` creates and instance of them in the DOM.
-* every `<use>` can be styled separately like objects in OOP
+* Every `<use>` can be styled separately like objects in OOP
 
 ```
 <svg>
@@ -239,7 +242,7 @@ This will make all SVG attributes which are controllable via CSS to be overwritt
 ### Style overwriting with CSS Custom Properties a.k.a CSS Variables
 
 * `currentColor` is the only CSS variable available in SVG today.
-* if we want to set other attributes we have to use custom CSS variables
+* If we want to set other attributes we have to use custom CSS variables
 
 ```
 <svg style="display: none">
