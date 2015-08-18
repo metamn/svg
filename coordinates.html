@@ -10,30 +10,336 @@
   </head>
 
   <body>
-    <h3>Original from Mondrian</h3>
 
-    <ul>
-      <li>
-        <strong>Dimensions:</strong> 1000x750
-      </li>
-      <li>
-        <strong>Viewbox:</strong> 0 0 100 750
-      </li>
-      <li>
-        <strong>CSS:</strong> width: 1000px; height: 750px; transform: scale(1);
-      </li>
-    </ul>
+    <article>
+      <h3>Viewport = viewBox</h3>
 
-    <svg
-      xmlns:mondrian="http://mondrian.io/xml"
-      xmlns="http://www.w3.org/2000/svg"
-      version="1.1"
-      height="750" width="1000"
-      id="main"
-      style="width: 1000px; height: 750px; transform: scale(1);"
-      viewbox="0 0 1000 750"
-      enable-background="new 0 0 1000 750">
-      <ellipse cx="488.99999999999955" cy="348.49999999999955" rx="250.00000000000014" ry="250.00000000001435"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
-    </svg>
+      <ul>
+        <li>
+          <strong>Viewport:</strong> 1000x750
+        </li>
+        <li>
+          <strong>Viewbox:</strong> 0 0 1000 750
+        </li>
+        <li>
+          <strong>CSS:</strong> width: auto;
+        </li>
+      </ul>
+
+      <p>
+        <em>The content must stay intact, original, centered.</em>
+      </p>
+
+      <svg width="1000" height="750" viewBox="0 0 1000 750" style="width: auto;">
+        <ellipse cx="488.99999999999955" cy="348.49999999999955" rx="250.00000000000014" ry="250.00000000001435"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+      </svg>
+    </article>
+
+
+    <article>
+      <h3>Viewport = viewBox * 2</h3>
+
+      <ul>
+        <li>
+          <strong>Viewport:</strong> 1000x750
+        </li>
+        <li>
+          <strong>Viewbox:</strong> 0 0 500 375
+        </li>
+        <li>
+          <strong>CSS:</strong> width: auto;
+        </li>
+      </ul>
+
+      <p>
+        <em>The content should have a 2x dimension. And clipped off</em>
+      </p>
+
+      <svg width="1000" height="750" viewBox="0 0 500 375" style="width: auto;">
+        <ellipse cx="488.99999999999955" cy="348.49999999999955" rx="250.00000000000014" ry="250.00000000001435"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+      </svg>
+    </article>
+
+
+    <article>
+      <h3>Viewport = viewBox / 2</h3>
+
+      <ul>
+        <li>
+          <strong>Viewport:</strong> 1000x750
+        </li>
+        <li>
+          <strong>Viewbox:</strong> 0 0 2000 1500
+        </li>
+        <li>
+          <strong>CSS:</strong> width: auto;
+        </li>
+      </ul>
+
+      <p>
+        <em>The content should have a 1/2 dimension. And moved up-left to the corner</em>
+      </p>
+
+      <svg width="1000" height="750" viewBox="0 0 2000 1500" style="width: auto;">
+        <ellipse cx="488.99999999999955" cy="348.49999999999955" rx="250.00000000000014" ry="250.00000000001435"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+      </svg>
+    </article>
+
+
+    <hr/>
+
+
+    <article>
+      <h3>Original from Mondrian</h3>
+
+      <ul>
+        <li>
+          <strong>Dimensions:</strong> 1000x750
+        </li>
+        <li>
+          <strong>Viewbox:</strong> 0 0 100 750
+        </li>
+        <li>
+          <strong>CSS:</strong> width: 1000px; height: 750px; transform: scale(1);
+        </li>
+      </ul>
+
+      <p>
+        <em>On smaller screens the image should be cropped</em>
+      </p>
+
+      <svg
+        xmlns:mondrian="http://mondrian.io/xml"
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+        height="750" width="1000"
+        id="main"
+        style="width: 1000px; height: 750px; transform: scale(1);"
+        viewbox="0 0 1000 750"
+        enable-background="new 0 0 1000 750">
+        <ellipse cx="488.99999999999955" cy="348.49999999999955" rx="250.00000000000014" ry="250.00000000001435"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+      </svg>
+    </article>
+
+    <article>
+      <h3>Fully stripped down from Mondrian</h3>
+
+      <ul>
+        <li>
+          <strong>Dimensions:</strong> n/a
+        </li>
+        <li>
+          <strong>Viewbox:</strong> n/a
+        </li>
+        <li>
+          <strong>CSS:</strong> n/a
+        </li>
+      </ul>
+
+      <p>
+        <em>It should display a blank 300x150 rectangle</em>
+      </p>
+
+      <svg>
+        <ellipse cx="488.99999999999955" cy="348.49999999999955" rx="250.00000000000014" ry="250.00000000001435"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+      </svg>
+    </article>
+
+
+    <article>
+      <h3>Just height and width</h3>
+
+      <ul>
+        <li>
+          <strong>Dimensions:</strong> 1000x750
+        </li>
+        <li>
+          <strong>Viewbox:</strong> n/a
+        </li>
+        <li>
+          <strong>CSS:</strong> n/a
+        </li>
+      </ul>
+
+      <p>
+        <em>On smaller screens the image should be cropped</em>
+      </p>
+
+      <svg height="750" width="1000">
+        <ellipse cx="488.99999999999955" cy="348.49999999999955" rx="250.00000000000014" ry="250.00000000001435"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+      </svg>
+    </article>
+
+    <article>
+      <h3>Height/width and viewbox</h3>
+
+      <ul>
+        <li>
+          <strong>Dimensions:</strong> 1000x750
+        </li>
+        <li>
+          <strong>Viewbox:</strong> 0 0 1000 750
+        </li>
+        <li>
+          <strong>CSS:</strong> n/a
+        </li>
+      </ul>
+
+      <p>
+        <em>On smaller screens the image should be cropped</em>
+      </p>
+
+      <svg height="750" width="1000" viewbox="0 0 1000 750">
+        <ellipse cx="488.99999999999955" cy="348.49999999999955" rx="250.00000000000014" ry="250.00000000001435"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+      </svg>
+    </article>
+
+
+    <article>
+      <h3>Height/width + viewbox + CSS</h3>
+
+      <ul>
+        <li>
+          <strong>Dimensions:</strong> 1000x750
+        </li>
+        <li>
+          <strong>Viewbox:</strong> 0 0 1000 750
+        </li>
+        <li>
+          <strong>CSS:</strong> width: 100%; height: auto;
+        </li>
+      </ul>
+
+      <p>
+        <em>It must be fully responsive.It must display the SVG on full screen.</em>
+      </p>
+
+      <svg height="750" width="1000" viewbox="0 0 1000 750" style="width: 100%; height: auto;">
+        <ellipse cx="488.99999999999955" cy="348.49999999999955" rx="250.00000000000014" ry="250.00000000001435"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+      </svg>
+    </article>
+
+
+    <article>
+      <h3>Just CSS</h3>
+
+      <ul>
+        <li>
+          <strong>Dimensions:</strong> n/a
+        </li>
+        <li>
+          <strong>Viewbox:</strong> n/a
+        </li>
+        <li>
+          <strong>CSS:</strong> width: 100%; height: auto;
+        </li>
+      </ul>
+
+      <p>
+        <em>It must be fully responsive. It must display a cropped SVG</em>
+      </p>
+
+      <svg style="width: 100%; height: auto;">
+        <ellipse cx="488.99999999999955" cy="348.49999999999955" rx="250.00000000000014" ry="250.00000000001435"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+      </svg>
+    </article>
+
+
+    <article>
+      <h3>Just CSS 2</h3>
+
+      <ul>
+        <li>
+          <strong>Dimensions:</strong> n/a
+        </li>
+        <li>
+          <strong>Viewbox:</strong> n/a
+        </li>
+        <li>
+          <strong>CSS:</strong> width: 100%; height: 100%;
+        </li>
+      </ul>
+
+      <p>
+        <em>It must be fully responsive. It must display a cropped SVG</em>
+      </p>
+
+      <svg style="width: 100%; height: 100%;">
+        <ellipse cx="488.99999999999955" cy="348.49999999999955" rx="250.00000000000014" ry="250.00000000001435"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+      </svg>
+    </article>
+
+    <article>
+      <h3>CSS + Dimension</h3>
+
+      <ul>
+        <li>
+          <strong>Dimensions:</strong> 1000 x 750
+        </li>
+        <li>
+          <strong>Viewbox:</strong> n/a
+        </li>
+        <li>
+          <strong>CSS:</strong> width: 100%; height: auto;
+        </li>
+      </ul>
+
+      <p>
+        <em>It must be fully responsive. It must display a cropped SVG</em>
+      </p>
+
+      <svg height="750" width="1000" style="width: 100%; height: auto">
+        <ellipse cx="488.99999999999955" cy="348.49999999999955" rx="250.00000000000014" ry="250.00000000001435"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+      </svg>
+    </article>
+
+    <article>
+      <h3>CSS + Viewbox</h3>
+
+      <ul>
+        <li>
+          <strong>Dimensions:</strong> n/a
+        </li>
+        <li>
+          <strong>Viewbox:</strong>  0 0 1000 750
+        </li>
+        <li>
+          <strong>CSS:</strong> width: 100%; height: auto;
+        </li>
+      </ul>
+
+      <p>
+        <em>It must be fully responsive. It must display the SVG on full screen.</em>
+      </p>
+
+      <svg viewbox="0 0 1000 750" style="width: 100%; height: auto">
+        <ellipse cx="488.99999999999955" cy="348.49999999999955" rx="250.00000000000014" ry="250.00000000001435"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+      </svg>
+    </article>
+
+
+    <article>
+      <h3>CSS 100% + Viewbox 100%</h3>
+
+      <ul>
+        <li>
+          <strong>Dimensions:</strong> n/a
+        </li>
+        <li>
+          <strong>Viewbox:</strong>  0 0 100% 100%
+        </li>
+        <li>
+          <strong>CSS:</strong> width: 100%; height: auto;
+        </li>
+      </ul>
+
+      <p>
+        <em>It must be fully responsive. It must display a cropped SVG.</em>
+      </p>
+
+      <svg viewbox="0 0 100% 100%" style="width: 100%; height: auto">
+        <ellipse cx="488.99999999999955" cy="348.49999999999955" rx="250.00000000000014" ry="250.00000000001435"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+      </svg>
+    </article>
   </body>
 </html>
