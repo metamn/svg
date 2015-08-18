@@ -107,5 +107,5 @@ See demo at http://codepen.io/SaraSoueidan/pen/48caf2f5fa42a8c154fcb5dec0dbe4d5
 ### Transformations (`animateTransform`)
 
 * Supports transformations like `translate`, `scale`, `rotate`, `skew`
-* To use one first must understand the [SVG coordinate system](http://sarasoueidan.com/blog/svg-coordinate-systems/)  
+* To use one first must understand the [SVG coordinate system](COORDINATES.md)  
 especially what is the `viewBox`, `viewport` and the `preserveAspectRatio`
