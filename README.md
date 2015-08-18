@@ -71,47 +71,6 @@ The responsive, stripped down version:
 
 
 
-
-## Animation
-
-
-https://css-tricks.com/weighing-svg-animation-techniques-benchmarks/
-
-
-* There are 3 ways to animate SVG:
-  * Standard CSS animations and transitions
-  * Javascript animations
-  * Native (SMIL) animations
-
-### CSS
-
-* SVG animations can be similar to CSS animations and transitions via by their nature. Keyframes are created, things move, colors change, etc.
-* Any transformation or transition animation that can be applied to an HTML element can also be applied to an SVG element
-* Since not all SVG (presentation) attributes are accessible by CSS, standard animations are available only for a subset of the SVG properties.
-
-### Javascript
-
-* With tools like http://snapsvg.io/, https://github.com/julianshapiro/velocity, https://github.com/greensock/GreenSock-JS/
-* They don't work with `img` and `background-image`
-
-### SMIL
-
-* SMIL seems to be a complete, very powerful animation framework like the best others out there (GreenSock)
-* It seems to have the best performance among all
-
-More details in [SMIL.md](SMIL.md)
-
-#### Which one to use and when
-
-* CSS &mdash; For small small transitions or simple animations like hover etc.
-* SMIL &mdash; For morphing elements, physics and more.
-* Velocity.js &mdash; hmm
-* GSAP &mdash; For very complex animations
-
-
-
-
-
 ## Structure
 
 http://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/
@@ -167,6 +126,7 @@ use.ic-2 {
 
 Even if the first `<svg>` is just a declaration (belongs to Shadow DOM) the browser will render an empty 300x150px area.
 Hence all declarations must have set `display: none`
+
 
 
 
@@ -278,3 +238,41 @@ This will make all SVG attributes which are controllable via CSS to be overwritt
 `var(--primary-color, #1E8F90)` is a custom CSS variable with a fallback color (`#1E8F90`).
 
 Currently only Firefox supports CSS variables. http://caniuse.com/#feat=css-variables
+
+
+
+## Animation
+
+
+https://css-tricks.com/weighing-svg-animation-techniques-benchmarks/
+
+
+* There are 3 ways to animate SVG:
+  * Standard CSS animations and transitions
+  * Javascript animations
+  * Native (SMIL) animations
+
+### CSS
+
+* SVG animations can be similar to CSS animations and transitions via by their nature. Keyframes are created, things move, colors change, etc.
+* Any transformation or transition animation that can be applied to an HTML element can also be applied to an SVG element
+* Since not all SVG (presentation) attributes are accessible by CSS, standard animations are available only for a subset of the SVG properties.
+
+### Javascript
+
+* With tools like http://snapsvg.io/, https://github.com/julianshapiro/velocity, https://github.com/greensock/GreenSock-JS/
+* They don't work with `img` and `background-image`
+
+### SMIL
+
+* SMIL seems to be a complete, very powerful animation framework like the best others out there (GreenSock)
+* It seems to have the best performance among all
+
+More details in [SMIL.md](SMIL.md)
+
+#### Which one to use and when
+
+* CSS &mdash; For small small transitions or simple animations like hover etc.
+* SMIL &mdash; For morphing elements, physics and more.
+* Velocity.js &mdash; hmm
+* GSAP &mdash; For very complex animations
