@@ -58,12 +58,16 @@ To make it fluid we will have to do nothing else than:
 <p data-height="268" data-theme-id="0" data-slug-hash="mJYZJL" data-default-tab="result" data-user="metamn" class='codepen'>See the Pen <a href='http://codepen.io/metamn/pen/mJYZJL/'>Simple fluid SVG</a> by metamn (<a href='http://codepen.io/metamn'>@metamn</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-This will display the svg of dimensions set by the screen's width.  
+This will display the svg with dimensions set by the screen's width.  
 If the screen is 320px width then the svg will be displayed on a 320x320 area.  
 If the screen is 1920px width then the svg will be displayed on a 1920x1920 area.  
 And the green rectangle inside will be scaled up / down depending on the screen size.
 
-#### Full screen
+#### Full screen, responsive
+
+The fluid SVG looks ugly on large displays spanning multiple pages.  
+To stick to a single page we will have to set it's `width` and `height`.
+
 ```
 article.fullscreen {
   height: 100vh;
@@ -80,8 +84,7 @@ article.fullscreen svg {
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 
-
-
+Details in [coordinates2.html](coordinates2.html).
 
 
 

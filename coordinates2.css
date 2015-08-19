@@ -3,7 +3,6 @@
 
 article.fullscreen {
   height: 100vh;
-  overflow: hidden;
 }
 
 article.fullscreen svg {
