@@ -37,37 +37,23 @@ https://css-tricks.com/using-svg/
 * `data-uri` &mdash;
 
 It seems the best usage is the inline `svg` method.
+Below we will discuss only this method.
 
 
 
 ## Responsive
 
-http://demosthenes.info/blog/744/Make-SVG-Responsive  
-http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/
+Let's say we have an SVG with a single 500x500px rectangle and padding top, padding left 100px.
+This gives us a 700x700px image.
 
-* `img`: `<img src="monkey.svg" alt="Monkey face" style="width: 100%; height: auto;">`
-* `svg`: is responsive by default
-* `object`: complicated
-
-New browsers make `svg` and `img` responsive by default. The condition is to have SVG attributes all stripped down to basics.
-Older browsers like IE needs hacks presented in the above articles.
-
-The Mondrian generated SVG file:
+To make it fluid we will have to do nothing else than:
 ```
-<!-- Made in Mondrian.io -->
-<svg xmlns:mondrian="http://mondrian.io/xml" xmlns="http://www.w3.org/2000/svg" version="1.1" height="800" width="1000" id="main" style="width: 1000px; height: 800px; transform: scale(1);" viewbox="0 0 1000 800" enable-background="new 0 0 1000 800">
-<ellipse cx="273" cy="261.5" rx="94" ry="92.5"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
-<path stroke="rgba(0, 0, 0, 1)" fill="rgba(95, 205, 167, 1)" stroke-width="1" d="M106,111 L628,495" />
+<svg viewBox="0 0 700 700">
+  <rect x="100" y="100" width="500.00000000000017" height="500.0000000000006"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
 </svg>
 ```
 
-The responsive, stripped down version:
-```
-<svg version="1.1" viewbox="0 0 1000 800">
-  <ellipse cx="273" cy="261.5" rx="94" ry="92.5"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
-  <path stroke="rgba(0, 0, 0, 1)" fill="rgba(95, 205, 167, 1)" stroke-width="1" d="M106,111 L628,495" />
-</svg>
-```
+
 
 
 
