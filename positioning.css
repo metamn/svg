@@ -1,0 +1,52 @@
+/* Responsive
+*/
+
+@media (orientation: landscape) {
+  svg.landscape {
+    display: flex;
+  }
+
+  svg.portrait {
+    display: none;
+  }
+}
+
+@media (orientation: portrait) {
+  svg.landscape {
+    display: none;
+  }
+
+  svg.portrait {
+    display: flex;
+  }
+}
+
+
+/* Full screen
+*/
+
+article. {
+  height: 100vh;
+}
+
+article svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* Non svg settings
+*/
+
+article {
+  background: #f1f1f1;
+}
+
+svg {
+  border: 1px solid;
+}
+
+p {
+  margin-bottom: 5em;
+}

@@ -135,25 +135,25 @@ Details in [responsive.html](responsive.html).
 http://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/
 
 
-### Group (`<g>`)
+#### Group (`<g>`)
 
 * Group together objects (like a layer in PSD)
 * Elements inside the group are styled uniformly
 * During animation elements inside a group preserve their positioning
 
-### Definitions (`<defs>`)
+#### Definitions (`<defs>`)
 
 * To store reusable elements
 * `defs` are not rendered until they are instantiated via a call
 * They are useful to define patterns like gradients
 
-### Symbols (`<symbol>`)
+#### Symbols (`<symbol>`)
 
 * Combine `<g>` and `<defs>` together
 * They don't define patterns but ore complex objects
 * It's responsive via `viewBox`
 
-### Use (`<use>`)
+#### Use (`<use>`)
 
 * Renders a previously defined `<g>`, `<defs>` or `<symbol>`
 * `<g>`, `<defs>` and `<symbol>` are stored in the __Shadow DOM__. `<use>` creates and instance of them in the DOM.
@@ -186,6 +186,31 @@ use.ic-2 {
 Even if the first `<svg>` is just a declaration (belongs to Shadow DOM) the browser will render an empty 300x150px area.
 Hence all declarations must have set `display: none`
 
+
+### Positioning
+
+When there are multiple elements they can be positioned via `cx` and `cy`.  
+Nothing extra.
+
+In portrait mode we have a small black circle above the green circle, in landscape mode we have the black circle at the top-right of the green circle.
+
+```
+<article>
+  <svg class="portrait" viewBox="0 0 768 1024" preserveAspectRatio="xMinYMin slice">
+    <rect x="0" y="0" width="768" height="1024"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+    <ellipse cx="384" cy="512" rx="200.00000000000006" ry="200"  fill="rgba(89, 195, 203, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+    <ellipse cx="384" cy="256" rx="50.00000000000006" ry="50"  fill="rgba(0, 0, 0, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+  </svg>
+
+  <svg class="landscape" viewBox="0 0 1366 768" preserveAspectRatio="xMinYMin slice">
+    <rect x="0" y="0" width="1366" height="768"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+    <ellipse cx="683" cy="384" rx="200.00000000000006" ry="200"  fill="rgba(89, 195, 203, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+    <ellipse cx="1024" cy="192" rx="50.00000000000006" ry="50"  fill="rgba(0, 0, 0, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+  </svg>
+</article>
+```
+
+See [positioning.html](positioning.htmlk)
 
 
 
