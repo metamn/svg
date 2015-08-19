@@ -1,3 +1,27 @@
+/* Responsive
+*/
+
+@media (orientation: landscape) {
+  svg.landscape {
+    display: flex;
+  }
+
+  svg.portrait {
+    display: none;
+  }
+}
+
+@media (orientation: portrait) {
+  svg.landscape {
+    display: none;
+  }
+
+  svg.portrait {
+    display: flex;
+  }
+}
+
+
 /* Full screen
 */
 

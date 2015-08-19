@@ -4,12 +4,26 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <title>SVG coordinates 2</title>
+    <title>SVG Responsive</title>
 
-    <link href="coordinates2.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="responsive.css" media="screen, projection" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
+
+    <article class="fullscreen responsive">
+      <svg class="portrait" viewBox="0 0 768 1024" preserveAspectRatio="xMinYMin slice">
+        <rect x="0" y="0" width="768" height="1024"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+      </svg>
+
+      <svg class="landscape" viewBox="0 0 1366 768" preserveAspectRatio="xMinYMin slice">
+        <rect x="0" y="0" width="1366" height="768"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+      </svg>
+    </article>
+    <p>
+      <em>Full screen, responsive, portrait or landscape</em>
+    </p>
+
 
     <article class="fullscreen">
       <svg viewBox="0 0 700 700">

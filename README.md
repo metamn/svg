@@ -71,7 +71,6 @@ To stick to a single page we will have to set it's `width` and `height`.
 ```
 article.fullscreen {
   height: 100vh;
-  overflow: hidden;
 }
 
 article.fullscreen svg {
@@ -84,7 +83,50 @@ article.fullscreen svg {
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 
-Details in [coordinates2.html](coordinates2.html).
+#### Portrait and landscape
+
+If we want to display an SVG adapted to different screens (portrait for mobiles, tablets; landscape for laptops and desktops) we will have to use plain old media queries.
+And add `preserveAspectRatio` to the SVG.
+
+```
+<article class="fullscreen responsive">
+  <svg class="portrait" viewBox="0 0 768 1024" preserveAspectRatio="xMinYMin slice">
+    <rect x="0" y="0" width="768" height="1024"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+  </svg>
+
+  <svg class="landscape" viewBox="0 0 1366 768" preserveAspectRatio="xMinYMin slice">
+    <rect x="0" y="0" width="1366" height="768"  fill="rgba(95, 205, 167, 1)" stroke="rgba(0, 0, 0, 1)" stroke-width="1"/>
+  </svg>
+</article>
+```
+```
+@media (orientation: landscape) {
+  svg.landscape {
+    display: flex;
+  }
+
+  svg.portrait {
+    display: none;
+  }
+}
+
+@media (orientation: portrait) {
+  svg.landscape {
+    display: none;
+  }
+
+  svg.portrait {
+    display: flex;
+  }
+}
+```
+
+
+
+
+
+
+Details in [responsive.html](responsive.html).
 
 
 
