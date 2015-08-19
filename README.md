@@ -46,6 +46,8 @@ Below we will discuss only this method.
 Let's say we have an SVG with a single 500x500px rectangle and padding top, padding left set to 100px.
 This gives us a 700x700px image.
 
+#### Fluid
+
 To make it fluid we will have to do nothing else than:
 ```
 <svg viewBox="0 0 700 700">
@@ -55,6 +57,30 @@ To make it fluid we will have to do nothing else than:
 
 <p data-height="268" data-theme-id="0" data-slug-hash="mJYZJL" data-default-tab="result" data-user="metamn" class='codepen'>See the Pen <a href='http://codepen.io/metamn/pen/mJYZJL/'>Simple fluid SVG</a> by metamn (<a href='http://codepen.io/metamn'>@metamn</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+This will display the svg of dimensions set by the screen's width.  
+If the screen is 320px width then the svg will be displayed on a 320x320 area.  
+If the screen is 1920px width then the svg will be displayed on a 1920x1920 area.  
+And the green rectangle inside will be scaled up / down depending on the screen size.
+
+#### Full screen
+```
+article.fullscreen {
+  height: 100vh;
+  overflow: hidden;
+}
+
+article.fullscreen svg {
+  width: 100%;
+  height: 100%;
+}
+```
+
+<p data-height="268" data-theme-id="0" data-slug-hash="QbRXML" data-default-tab="result" data-user="metamn" class='codepen'>See the Pen <a href='http://codepen.io/metamn/pen/QbRXML/'>Full screen, responsive SVG</a> by metamn (<a href='http://codepen.io/metamn'>@metamn</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+
+
 
 
 

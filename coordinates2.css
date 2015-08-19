@@ -1,3 +1,20 @@
+/* Full screen
+*/
+
+article.fullscreen {
+  height: 100vh;
+  overflow: hidden;
+}
+
+article.fullscreen svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Fluid
+*/
+
 article {
   margin-bottom: 5em;
   background: #f1f1f1;
