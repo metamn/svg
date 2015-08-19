@@ -43,7 +43,7 @@ Below we will discuss only this method.
 
 ## Responsive
 
-Let's say we have an SVG with a single 500x500px rectangle and padding top, padding left 100px.
+Let's say we have an SVG with a single 500x500px rectangle and padding top, padding left set to 100px.
 This gives us a 700x700px image.
 
 To make it fluid we will have to do nothing else than:
@@ -53,6 +53,8 @@ To make it fluid we will have to do nothing else than:
 </svg>
 ```
 
+<p data-height="268" data-theme-id="0" data-slug-hash="mJYZJL" data-default-tab="result" data-user="metamn" class='codepen'>See the Pen <a href='http://codepen.io/metamn/pen/mJYZJL/'>Simple fluid SVG</a> by metamn (<a href='http://codepen.io/metamn'>@metamn</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 
 
