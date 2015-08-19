@@ -11,14 +11,21 @@ article.fullscreen svg {
 }
 
 
-/* Fluid
+/* Fluid (by default)
+*/
+
+
+/* Non svg settings
 */
 
 article {
-  margin-bottom: 5em;
   background: #f1f1f1;
 }
 
 svg {
   border: 1px solid;
+}
+
+p {
+  margin-bottom: 5em;
 }
