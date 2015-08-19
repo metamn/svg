@@ -121,8 +121,8 @@ And add `preserveAspectRatio` to the SVG.
 }
 ```
 
-
-
+<p data-height="268" data-theme-id="0" data-slug-hash="LVKPgb" data-default-tab="result" data-user="metamn" class='codepen'>See the Pen <a href='http://codepen.io/metamn/pen/LVKPgb/'>Full screen, responsive SVG with portrait and landscape support</a> by metamn (<a href='http://codepen.io/metamn'>@metamn</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 
 
