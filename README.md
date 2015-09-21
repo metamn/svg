@@ -24,6 +24,9 @@ https://en.wikipedia.org/wiki/Scalable_Vector_Graphics
 ## Tools
 
 * http://mondrian.io - Browser based SVG creator
+* http://snapsvg.io/ - Create SVG with the power of Javascript
+* http://bramp.github.io/js-sequence-diagrams/ - Create UML sequence diagrams from plain text
+
 
 
 ## Usage
@@ -351,12 +354,14 @@ https://css-tricks.com/weighing-svg-animation-techniques-benchmarks/
 
 * SMIL seems to be a complete, very powerful animation framework like the best others out there (GreenSock)
 * It seems to have the best performance among all
+* Lately it turned out SMIL support is deprecating in Chrome: http://www.smashingmagazine.com/2015/09/creating-cel-animations-with-svg/
 
 More details in [SMIL.md](SMIL.md)
 
 #### Which one to use and when
 
 * CSS &mdash; For small small transitions or simple animations like hover etc.
-* SMIL &mdash; For morphing elements, physics and more.
+* SMIL &mdash; For morphing elements, physics and more. (CHROME NO MORE SUPPORTING IT!)
 * Velocity.js &mdash; hmm
 * GSAP &mdash; For very complex animations
+* WAAPI (Web Animation API) &mdash; It seems to be the future supported by Google: http://danielcwilson.com/blog/2015/07/animations-intro/
