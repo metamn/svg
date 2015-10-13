@@ -26,6 +26,7 @@ https://en.wikipedia.org/wiki/Scalable_Vector_Graphics
 * http://mondrian.io - Browser based SVG creator
 * http://snapsvg.io/ - Create SVG with the power of Javascript
 * http://bramp.github.io/js-sequence-diagrams/ - Create UML sequence diagrams from plain text
+* https://github.com/svg/svgo - Clean SVG from metadata, xmlns etc
 
 
 
